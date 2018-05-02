@@ -6,7 +6,6 @@ import Messages from './messages';
 
 const App = () => (
   <ContextStoreProvider context={context} store={store}>
-    <h1>Messages</h1>
     <Messages />
   </ContextStoreProvider>
 );

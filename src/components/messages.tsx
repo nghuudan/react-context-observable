@@ -4,6 +4,7 @@ import messageStore from '../stores/message-store';
 
 const Messages = () => (
   <div>
+    <h1>Messages</h1>
     <button onClick={() => messageStore.methods.addMessage({
       body: `Message_${messageStore.data.newCount}`,
       date: new Date(),
