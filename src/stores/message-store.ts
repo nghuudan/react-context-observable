@@ -1,4 +1,4 @@
-import { combineLatest, Observable, Subject } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { createContextStore, ContextStore } from '../lib';
 
 export interface Message {
