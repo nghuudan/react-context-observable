@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist/",
+    "rootDir": "./src/"
+  },
+  "exclude": [
+    "./src/components",
+    "./src/*.*",
+    "**/*.spec.ts*"
+  ],
+  "extends": "./tsconfig"
+}
