@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { shallow } from 'enzyme';
 import App from './components/app';
-import '.';
+import './main';
 
 jest.mock('react-dom');
 jest.mock('./components/app');
