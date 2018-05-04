@@ -55,7 +55,7 @@ import { ContextStoreProvider } from 'react-context-observable';
 import exampleContext, { Consumer } from '../contexts/example-context';
 import exampleStore from '../stores/example-store';
 
-const Examples = () => {
+const Examples = () => (
   <ul>
     <Consumer>
       {
@@ -70,7 +70,7 @@ const Examples = () => {
       }
     </Consumer>
   </ul>
-};
+);
 
 const App = () => (
   <ContextStoreProvider context={exampleContext} store={exampleStore}>
