@@ -30,7 +30,7 @@ const exampleStore = createContextStore({
     removeExample(id) {
       this.data.examples = this.data.examples.filter(example => example.id !== id);
     }
-  },
+  }
 });
 
 export default exampleStore;
