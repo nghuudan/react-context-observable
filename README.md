@@ -62,7 +62,7 @@ const Examples = () => {
         ({ data, methods }) => data.examples.map(example => (
           <li key={example.id}>
             {example.title}
-            <button onClick={methods.removeExample(example.id)}>
+            <button onClick={() => methods.removeExample(example.id)}>
               Remove
             </button>
           </li>
