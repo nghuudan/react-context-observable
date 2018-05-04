@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry: path.join(__dirname, 'src', 'index'),
+  entry: path.join(__dirname, 'src', 'main'),
   mode: 'development',
   module: {
     rules: [
