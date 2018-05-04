@@ -4,6 +4,7 @@ React context store for state with Observables
 - [Context Store](#context-store)
 - [React Context](#react-context)
 - [Context Store Provider](#context-store-provider)
+- [With Context Store](#with-context-store)
 
 ## Context Store
 ```javascript
@@ -82,4 +83,39 @@ const App = () => (
 );
 
 render(<App />, document.getElementById('app'));
+```
+
+## With Context Store
+```javascript
+import React from 'react';
+import { render } from 'react-dom';
+import { withContextStore } from 'react-context-observable';
+import exampleContext, { Consumer } from '../contexts/example-context';
+import exampleStore from '../stores/example-store';
+
+const App = () => (
+  <div>
+    <ul>
+      <Consumer>
+        {
+          ({ data, methods }) => data.examples.map(example => (
+            <li key={example.id}>
+              {example.title}
+              <button onClick={() => methods.removeExample(example.id)}>
+                Remove
+              </button>
+            </li>
+          ))
+        }
+      </Consumer>
+    </ul>
+    <button onClick={() => exampleStore.methods.fetchExample(2)}>
+      Fetch Example 2
+    </button>
+  </div>
+);
+
+const AppContainer = withContextStore(exampleContext, exampleStore)(App);
+
+render(<AppContainer />, document.getElementById('app'));
 ```
