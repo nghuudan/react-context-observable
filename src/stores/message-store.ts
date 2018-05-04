@@ -74,12 +74,7 @@ const store: ContextStore<MessageData, MessageMethods> = createContextStore({
       this.data.messages = [];
     },
     removeMessage(message: Message) {
-      const messages = this.data.messages;
-      const index = messages.findIndex((m: Message) => m === message);
-      this.data.messages = [
-        ...messages.slice(0, index),
-        ...messages.slice(index + 1),
-      ];
+      this.data.messages = this.data.messages.filter((m: Message) => m !== message);
     },
   },
 });

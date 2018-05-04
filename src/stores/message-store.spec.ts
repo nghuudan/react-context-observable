@@ -80,7 +80,7 @@ describe('messageStore', () => {
       expect(messageStore.data.messages).toHaveLength(0);
     });
 
-    it('should remove the message it finds by index', () => {
+    it('should remove the message it finds by equality', () => {
       const message = {
         body: '',
         date: new Date(),
