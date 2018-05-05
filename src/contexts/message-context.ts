@@ -1,7 +1,7 @@
-import React from 'react';
+import { createContext } from 'react';
 import messageStore from '../stores/message-store';
 
-const context = React.createContext(messageStore);
+const context = createContext(messageStore);
 
 export const { Consumer, Provider } = context;
 export default context;

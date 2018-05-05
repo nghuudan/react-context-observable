@@ -1,6 +1,6 @@
 import React from 'react';
 import { Subscription } from 'rxjs';
-import { ContextStore, ContextStoreBase } from './create-context-store';
+import { ContextStore } from './create-context-store';
 
 export interface ContextStoreProps {
   context: React.Context<any>;
